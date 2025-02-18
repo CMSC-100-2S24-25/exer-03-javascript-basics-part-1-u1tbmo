@@ -67,4 +67,7 @@ function storePassword(name, password1, password2) {
   else {
     stored["newpassword"] = password1;
   }
+
+  // Return the object
+  return stored;
 }
