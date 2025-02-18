@@ -40,3 +40,14 @@ function validatePassword(password1, password2) {
   // Check remaining conditions
   return hasNumber && hasUppercase && hasLowercase;
 }
+
+function reversePassword(password) {
+  // Initialize an empty string to hold the reversed password
+  let reversed = "";
+  // Concatenate each char in password to reversed starting from the end
+  for (let i = password.length - 1; i >= 0; i--) {
+    reversed += password.charAt(i);
+  }
+  // Return reversed string
+  return reversed;
+}
