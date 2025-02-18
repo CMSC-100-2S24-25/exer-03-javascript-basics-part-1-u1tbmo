@@ -3,6 +3,12 @@
 - **Name:** Euan Jed Tabamo
 - **Degree Program:** BS Computer Science
 
+A program that has the ability to validate, reverse, and store passwords in objects.
+
+## Key Takeaways
+
+The exercise was able to teach me the syntax and some methods in JavaScript. Prior knowledge from languages like Python, C, and Java, helped a lot with the exercise. Most of the JavaScript syntax is similar or even the same as other languages.
+
 ## References
 - [Object Equality - FreeCodeCamp](https://www.freecodecamp.org/news/javascript-comparison-operators-how-to-compare-objects-for-equality-in-js/)
 - [Standard Output without Newline - StackOverflow](https://stackoverflow.com/a/6157569)
