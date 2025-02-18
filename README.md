@@ -2,3 +2,7 @@
 # Javascript Basics
 - **Name:** Euan Jed Tabamo
 - **Degree Program:** BS Computer Science
+
+## References
+- [Object Equality - FreeCodeCamp](https://www.freecodecamp.org/news/javascript-comparison-operators-how-to-compare-objects-for-equality-in-js/)
+- [Standard Output without Newline - StackOverflow](https://stackoverflow.com/a/6157569)
