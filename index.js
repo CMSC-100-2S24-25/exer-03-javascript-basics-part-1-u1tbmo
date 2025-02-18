@@ -51,3 +51,20 @@ function reversePassword(password) {
   // Return reversed string
   return reversed;
 }
+
+function storePassword(name, password1, password2) {
+  // Create an object
+  const stored = {};
+
+  // Initialize name field
+  stored["name"] = name;
+
+  // If the passwords are valid, store the reversed password
+  if (validatePassword(password1, password2)) {
+    stored["newpassword"] = reversePassword(password2);
+  }
+  // Otherwise, store the first password 
+  else {
+    stored["newpassword"] = password1;
+  }
+}
