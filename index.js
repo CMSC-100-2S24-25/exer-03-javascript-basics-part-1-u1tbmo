@@ -34,7 +34,6 @@ function validatePassword(password1, password2) {
     // Transform the char to lowercase. If the result is the same, then the char is lowercase 
     else if (character.toLowerCase() === character) {
       hasLowercase = true;
-
     }
   }
 
