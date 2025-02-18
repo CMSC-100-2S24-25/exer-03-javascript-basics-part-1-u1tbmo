@@ -71,3 +71,48 @@ function storePassword(name, password1, password2) {
   // Return the object
   return stored;
 }
+
+
+function runTests() {
+  /* VALIDATE PASSWORDS */
+  const validateTest1 = false === validatePassword("helloworld", "hello");
+  const validateTest2 = false === validatePassword("hello", "hello");
+  const validateTest3 = false === validatePassword("helloooo", "helloooo");
+  const validateTest4 = false === validatePassword("hello1234", "hello1234");
+  const validateTest5 = false === validatePassword("HELLO1234", "HELLO1234");
+  const validateTest6 = true === validatePassword("Hello1234", "Hello1234");
+  
+  console.log("\nVALIDATE PASSWORDS\n");
+  console.log(`validatePassword() returns false if passwords are mismatched: ${validateTest1}`);
+  console.log(`validatePassword() returns false if password/s are too short: ${validateTest2}`);
+  console.log(`validatePassword() returns false if there is no numerical character: ${validateTest3}`);
+  console.log(`validatePassword() returns false if there is no lowercase character: ${validateTest4}`);
+  console.log(`validatePassword() returns false if there is no uppercase character: ${validateTest5}`);
+  console.log(`validatePassword() returns true if password is valid: ${validateTest6}`);
+
+  /* REVERSE PASSWORD */  
+  const reverseOutput = reversePassword("18sd9hj1uhy832");
+  const reverseTest = "238yhu1jh9ds81" === reverseOutput;
+
+  console.log("\nREVERSE PASSWORDS\n");
+  console.log(`reversePassword() returns true if password is correctly reversed: ${reverseTest}`);
+  console.log(`Output: ${reverseOutput}`);
+
+  /* STORE PASSWORDS */
+  // Testing for object equality: https://www.freecodecamp.org/news/javascript-comparison-operators-how-to-compare-objects-for-equality-in-js/  
+  const object1 = storePassword("John", "Pass1234", "Pass1234");
+  const storeTest1 = JSON.stringify(object1) === JSON.stringify({ name: "John", newpassword: "4321ssaP" });
+  const object2 = storePassword("John", "Pass123", "Pass12345");
+  const storeTest2 = JSON.stringify(object2) === JSON.stringify({ name: "John", newpassword: "Pass123" });
+  
+  console.log("\nSTORE PASSWORDS\n");
+  console.log(`storePassword() stores reversed password if valid: ${storeTest1}`);
+  // Printing without newline: https://stackoverflow.com/a/6157569
+  process.stdout.write("Output: ");
+  console.log(object1);
+  console.log(`storePassword() stores first password if invalid: ${storeTest2}`);
+  process.stdout.write("Output: ");
+  console.log(object2);
+}
+
+runTests();
