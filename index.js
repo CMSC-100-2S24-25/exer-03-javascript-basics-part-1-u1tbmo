@@ -23,8 +23,8 @@ function validatePassword(password1, password2) {
     // Get the char at pos i
     const character = password2.charAt(i);
 
-    // Parse the char as int and check if it is the same char by using comparison
-    if (parseInt(character) == character) {
+    // Parse the char as int and check if it is a number
+    if (!isNaN(parseInt(character))) {
       hasNumber = true;
     }
     // Transform the char to uppercase. If the result is the same, then the char is uppercase 
